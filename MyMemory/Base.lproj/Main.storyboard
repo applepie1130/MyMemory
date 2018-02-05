@@ -163,7 +163,7 @@
         <!--메모 작성-->
         <scene sceneID="YWc-Ua-A2e">
             <objects>
-                <viewController id="uhq-NM-HPD" sceneMemberID="viewController">
+                <viewController id="uhq-NM-HPD" customClass="MemoFormVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nxy-yJ-lLc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,12 +197,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QwW-Rc-kej"/>
                     </view>
-                    <navigationItem key="navigationItem" title="메모 작성" id="jeG-3E-YIu">
+                    <navigationItem key="navigationItem" title="메모 작성" id="jeG-3E-YIu" customClass="특히">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="ibO-rw-aO0"/>
-                            <barButtonItem title="저장" id="xFb-2a-98b"/>
+                            <barButtonItem systemItem="camera" id="ibO-rw-aO0">
+                                <connections>
+                                    <action selector="pick:" destination="uhq-NM-HPD" id="YfO-2G-4Wk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="xFb-2a-98b">
+                                <connections>
+                                    <action selector="save:" destination="uhq-NM-HPD" id="FE7-Ci-NIk"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contents" destination="T2j-9x-1td" id="ua0-LW-X0Y"/>
+                        <outlet property="momoForm" destination="Nxy-yJ-lLc" id="XdS-ee-WVo"/>
+                        <outlet property="preview" destination="G4h-ex-nXm" id="yC8-31-74e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13N-hz-gzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,7 +224,7 @@
         <!--Title-->
         <scene sceneID="Sq5-7x-amk">
             <objects>
-                <viewController id="vgQ-Wf-Kvk" sceneMemberID="viewController">
+                <viewController id="vgQ-Wf-Kvk" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsh-Pb-1et">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
