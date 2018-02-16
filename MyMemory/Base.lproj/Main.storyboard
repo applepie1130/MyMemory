@@ -74,6 +74,11 @@
                                         <constraint firstItem="B4P-La-RvD" firstAttribute="leading" secondItem="C79-gI-7lP" secondAttribute="leadingMargin" constant="10" id="svY-68-1Ue"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="mgY-0R-3BI" id="haH-PT-Q5J"/>
+                                    <outlet property="regdate" destination="jlL-Xe-TWe" id="ozV-21-fEg"/>
+                                    <outlet property="subject" destination="B4P-La-RvD" id="gNV-Al-ttm"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="E77-Ho-Lfu" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
@@ -138,6 +143,12 @@
                                         <constraint firstItem="J2a-31-go2" firstAttribute="top" secondItem="mJc-xP-qxd" secondAttribute="topMargin" id="quJ-aw-kkA"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="RNH-nx-4XQ" id="Uz2-OP-CQk"/>
+                                    <outlet property="img" destination="nsd-7z-CeK" id="FPQ-RH-yX3"/>
+                                    <outlet property="regdate" destination="65L-K6-zvB" id="PKF-js-2AS"/>
+                                    <outlet property="subject" destination="J2a-31-go2" id="Cai-Dq-XJo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -148,7 +159,7 @@
                     <navigationItem key="navigationItem" title="목록" id="fUh-JJ-ty9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wCy-Iy-Urk">
                             <connections>
-                                <segue destination="uhq-NM-HPD" kind="show" id="PdG-gL-8xV"/>
+                                <segue destination="uhq-NM-HPD" kind="show" id="fqk-Vw-x98"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
